@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import JobSeekerDashboard from "./pages/JobSeekerDashboard";
+import EmployerDashboard from "./pages/EmployerDashboard";
+import AdminDashboard from "./pages/AdminDashboard";
+import Notification from "./components/Notification";
+import { fetchJobs } from "./api";
+import "./App.css";
 
-function App() {
+const App = () => {
+  const [jobs, setJobs] = useState([]);
+  const [notifications, setNotifications] = useState([
+    { id: 1, message: "New job posted!" },
+  ]);
+
+  useEffect(() => {
+    fetchJobs()
+      .then((response) => setJobs(response.data))
+      .catch((error) => console.error("Error fetching jobs:", error));
+  }, []);
+
+  const removeNotification = (id) => {
+    setNotifications(notifications.filter((n) => n.id !== id));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Notification messages={notifications} onClose={removeNotification} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/job-seeker"
+          element={<JobSeekerDashboard jobs={jobs} />}
+        />
+        <Route path="/employer" element={<EmployerDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
