@@ -8,10 +8,10 @@ const AlertSettings = () => {
         <i className="fas fa-bell"></i> Set Job Alerts
       </h3>
       <label>
-        <input type="checkbox" /> Email
+        <input type="checkbox" /> <i className="fas fa-envelope"></i> Email
       </label>
       <label>
-        <input type="checkbox" /> SMS
+        <input type="checkbox" /> <i className="fas fa-sms"></i> SMS
       </label>
       <button>
         Save <i className="fas fa-save"></i>

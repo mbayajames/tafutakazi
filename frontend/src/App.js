@@ -39,6 +39,7 @@ const App = () => {
         <Route path="/employer" element={<EmployerDashboard />} />
         <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

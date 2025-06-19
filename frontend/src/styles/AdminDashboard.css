@@ -1,0 +1,18 @@
+.admin-dashboard {
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.admin-dashboard i {
+  margin-right: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
