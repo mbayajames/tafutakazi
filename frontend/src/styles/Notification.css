@@ -1,0 +1,48 @@
+.notification-container {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.notification {
+  background: linear-gradient(135deg, #00cc00, #009900);
+  color: #fff;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 8px;
+  animation: slideIn 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.notification i {
+  font-size: 1.3rem;
+}
+
+.close-btn {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: transform 0.3s;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
