@@ -7,6 +7,17 @@ const Footer = () => {
       <p>
         © 2025 TafutaKazi <i className="fas fa-heart"></i>
       </p>
+      <div className="social-links">
+        <a href="#">
+          <i className="fab fa-facebook-f"></i>
+        </a>
+        <a href="#">
+          <i className="fab fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i className="fab fa-linkedin-in"></i>
+        </a>
+      </div>
     </footer>
   );
 };
