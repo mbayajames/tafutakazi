@@ -14,6 +14,9 @@ const ResumeUpload = () => {
         <i className="fas fa-file-upload"></i> Upload Resume
       </h3>
       <input type="file" accept=".pdf,.doc,.docx" onChange={handleUpload} />
+      <p>
+        <i className="fas fa-info-circle"></i> Supported formats: PDF, DOC, DOCX
+      </p>
     </div>
   );
 };
