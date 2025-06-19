@@ -6,20 +6,28 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h2 className="logo">
-        Tafutakazi <i className="fas fa-briefcase"></i>
+        TafutaKazi <i className="fas fa-briefcase"></i>
       </h2>
       <ul className="nav-links">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <i className="fas fa-home"></i> Home
+          </Link>
         </li>
         <li>
-          <Link to="/job-seeker">Job Seeker</Link>
+          <Link to="/job-seeker">
+            <i className="fas fa-user"></i> Job Seeker
+          </Link>
         </li>
         <li>
-          <Link to="/employer">Employer</Link>
+          <Link to="/employer">
+            <i className="fas fa-building"></i> Employer
+          </Link>
         </li>
         <li>
-          <Link to="/admin">Admin</Link>
+          <Link to="/admin">
+            <i className="fas fa-shield-alt"></i> Admin
+          </Link>
         </li>
       </ul>
     </nav>
