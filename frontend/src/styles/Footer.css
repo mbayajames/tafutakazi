@@ -1,0 +1,48 @@
+.footer {
+  background: linear-gradient(90deg, #000, #1a1a1a);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.footer p {
+  margin: 0 0 1rem 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: #00cc00;
+  transform: scale(1.2);
+}
+
+.footer i {
+  color: #00cc00;
+  transition: transform 0.3s;
+}
+
+.footer:hover i {
+  transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
